@@ -56,6 +56,7 @@
             this.TB_nameGen2 = new System.Windows.Forms.TextBox();
             this.TB_nameGen1 = new System.Windows.Forms.TextBox();
             this.groupBox_Image = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.LL_selectedImage = new System.Windows.Forms.LinkLabel();
             this.B_importImagesList = new System.Windows.Forms.Button();
             this.B_chooseImgFolder = new System.Windows.Forms.Button();
@@ -67,7 +68,6 @@
             this.CB_recurseImageList = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PB_loadedImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.SuspendLayout();
@@ -155,6 +155,7 @@
             this.groupBox_Options.TabIndex = 4;
             this.groupBox_Options.TabStop = false;
             this.groupBox_Options.Text = "Naming Options";
+            this.groupBox_Options.Enter += new System.EventHandler(this.groupBox_Options_Enter);
             // 
             // label13
             // 
@@ -373,6 +374,15 @@
             this.groupBox_Image.TabStop = false;
             this.groupBox_Image.Text = "Image + Saving / Loading";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(165, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(77, 13);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Image Preview";
+            // 
             // LL_selectedImage
             // 
             this.LL_selectedImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -486,15 +496,6 @@
             this.label11.Size = new System.Drawing.Size(69, 13);
             this.label11.TabIndex = 12;
             this.label11.Text = "Version 0.0.1";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(165, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 13);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Image Preview";
             // 
             // OptionsWindow
             // 

@@ -7,3 +7,12 @@ c:\users\fin\documents\visual studio 2017\Projects\ImageRenamerTool\obj\Debug\Im
 c:\users\fin\documents\visual studio 2017\Projects\ImageRenamerTool\obj\Debug\ImageRenamerTool.csproj.GenerateResource.Cache
 c:\users\fin\documents\visual studio 2017\Projects\ImageRenamerTool\obj\Debug\ImageRenamerTool.exe
 c:\users\fin\documents\visual studio 2017\Projects\ImageRenamerTool\obj\Debug\ImageRenamerTool.pdb
+C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\bin\Debug\ImageRenamerTool.exe.config
+C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\bin\Debug\ImageRenamerTool.exe
+C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\bin\Debug\ImageRenamerTool.pdb
+C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.csprojResolveAssemblyReference.cache
+C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.OptionsWindow.resources
+C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.Properties.Resources.resources
+C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.csproj.GenerateResource.Cache
+C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.exe
+C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.pdb

@@ -179,5 +179,10 @@ namespace ImageRenamerTool
         {
 
         }
+
+        private void groupBox_Options_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
