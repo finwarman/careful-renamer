@@ -25,6 +25,7 @@ namespace ImageRenamerTool
             //PB_loadedImage.ImageLocation = @"C:\Users\Fin\Pictures\demo.bmp";
 
             string currentDir = Directory.GetCurrentDirectory();
+
             MTB_loadFolder.Text = currentDir;
 
             UpdateNameGen();
@@ -170,9 +171,13 @@ namespace ImageRenamerTool
 
         }
 
+        private bool ignoreTextChanged = false;
         private void MTB_loadFolder_TextChanged(object sender, EventArgs e)
         {
-            ImportImagesList();
+            if (!ignoreTextChanged)
+            {
+                ImportImagesList();
+            }
         }
 
         private void LL_selectedImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

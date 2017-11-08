@@ -424,10 +424,6 @@
             // 
             this.LST_loadedImages.FormattingEnabled = true;
             this.LST_loadedImages.HorizontalScrollbar = true;
-            this.LST_loadedImages.Items.AddRange(new object[] {
-            "Image0.jpg",
-            "image1.bmp",
-            "image_2.bmp"});
             this.LST_loadedImages.Location = new System.Drawing.Point(388, 34);
             this.LST_loadedImages.Name = "LST_loadedImages";
             this.LST_loadedImages.Size = new System.Drawing.Size(184, 329);
