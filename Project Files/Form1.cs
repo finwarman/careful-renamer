@@ -120,6 +120,8 @@ namespace ImageRenamerTool
         {
             string topLevelDirectory = MTB_loadFolder.Text;
 
+            string selectFileType = CB_fileType.Items[CB_fileType.SelectedIndex].ToString();
+
             string[] files = new string[0];
             if (CB_recurseImageList.Checked)
             {
