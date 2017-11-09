@@ -68,6 +68,8 @@
             this.CB_recurseImageList = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.CB_fileType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PB_loadedImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.SuspendLayout();
@@ -102,7 +104,7 @@
             // 
             this.MTB_loadFolder.Location = new System.Drawing.Point(9, 377);
             this.MTB_loadFolder.Name = "MTB_loadFolder";
-            this.MTB_loadFolder.Size = new System.Drawing.Size(479, 20);
+            this.MTB_loadFolder.Size = new System.Drawing.Size(373, 20);
             this.MTB_loadFolder.TabIndex = 2;
             this.MTB_loadFolder.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MTB_loadFolder_MaskInputRejected);
             this.MTB_loadFolder.TextChanged += new System.EventHandler(this.MTB_loadFolder_TextChanged);
@@ -354,6 +356,8 @@
             // 
             // groupBox_Image
             // 
+            this.groupBox_Image.Controls.Add(this.CB_fileType);
+            this.groupBox_Image.Controls.Add(this.label15);
             this.groupBox_Image.Controls.Add(this.label14);
             this.groupBox_Image.Controls.Add(this.LL_selectedImage);
             this.groupBox_Image.Controls.Add(this.B_importImagesList);
@@ -402,9 +406,9 @@
             // 
             // B_importImagesList
             // 
-            this.B_importImagesList.Location = new System.Drawing.Point(494, 375);
+            this.B_importImagesList.Location = new System.Drawing.Point(510, 375);
             this.B_importImagesList.Name = "B_importImagesList";
-            this.B_importImagesList.Size = new System.Drawing.Size(78, 23);
+            this.B_importImagesList.Size = new System.Drawing.Size(62, 23);
             this.B_importImagesList.TabIndex = 14;
             this.B_importImagesList.Text = "Reload";
             this.B_importImagesList.UseVisualStyleBackColor = true;
@@ -493,6 +497,32 @@
             this.label11.TabIndex = 12;
             this.label11.Text = "Version 0.0.1";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(388, 380);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 13);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "File Type:";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // CB_fileType
+            // 
+            this.CB_fileType.FormattingEnabled = true;
+            this.CB_fileType.Items.AddRange(new object[] {
+            "All (.*.)",
+            "Images",
+            "JPG",
+            "BMP",
+            "GIF",
+            "EXE"});
+            this.CB_fileType.Location = new System.Drawing.Point(439, 377);
+            this.CB_fileType.Name = "CB_fileType";
+            this.CB_fileType.Size = new System.Drawing.Size(65, 21);
+            this.CB_fileType.TabIndex = 14;
+            this.CB_fileType.Text = "All (.*.)";
+            // 
             // OptionsWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -562,6 +592,8 @@
         private System.Windows.Forms.Button B_importImagesList;
         private System.Windows.Forms.LinkLabel LL_selectedImage;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox CB_fileType;
     }
 }
 

@@ -6,3 +6,4 @@ C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renamin
 C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Release\ImageRenamerTool.csproj.GenerateResource.Cache
 C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Release\ImageRenamerTool.exe
 C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Release\ImageRenamerTool.pdb
+C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Release\ImageRenamerTool.csprojResolveAssemblyReference.cache
