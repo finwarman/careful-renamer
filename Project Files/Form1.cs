@@ -229,10 +229,14 @@ namespace ImageRenamerTool
             string Imglocation = PB_loadedImage.ImageLocation;
 
             FileInfo currentFile = new FileInfo(Imglocation);
-            currentFile.MoveTo(currentFile.Directory.FullName + "\\" + TB_nameGenFull.Text + currentFile.Extension);
+
+            string newName = currentFile.Directory.FullName + "\\" + TB_nameGenFull.Text + currentFile.Extension;
+            currentFile.MoveTo(newName);
+
+            LST_loadedImages.Items[LST_loadedImages.SelectedIndex] = newName;
 
             int newIndex = ((LST_loadedImages.SelectedIndex + 1) % LST_loadedImages.Items.Count);
-            ImportImagesList();
+            //ImportImagesList();
             LST_loadedImages.SelectedIndex = newIndex;
 
         }
