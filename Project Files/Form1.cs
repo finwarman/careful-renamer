@@ -235,6 +235,7 @@ namespace ImageRenamerTool
 
             LST_loadedImages.Items[LST_loadedImages.SelectedIndex] = newName;
 
+
             int newIndex = ((LST_loadedImages.SelectedIndex + 1) % LST_loadedImages.Items.Count);
             //ImportImagesList();
             LST_loadedImages.SelectedIndex = newIndex;
