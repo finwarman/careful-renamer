@@ -55,7 +55,16 @@ namespace ImageRenamerTool
             if (CB_useSeparator.Checked)
             {
                 string sep = TB_separators.Text;
-                TB_nameGenFull.Text = TB_nameGen1.Text + sep + TB_nameGen2.Text + sep + TB_nameGen3.Text + sep + TB_nameGen4.Text + sep + TB_nameGen5.Text;
+                TextBox[] TB_nameGens = new TextBox[] {TB_nameGen1, TB_nameGen2, TB_nameGen3, TB_nameGen4 ,TB_nameGen5 };
+                TB_nameGenFull.Text = TB_nameGen1.Text;
+                for (int i = 1; i < TB_nameGens.Length; i++)
+                {
+                    if(TB_nameGens[i].Text.Length > 0)
+                    {
+                        TB_nameGenFull.Text += sep + TB_nameGens[i].Text;
+                    }
+                }
+                //TB_nameGenFull.Text = TB_nameGen1.Text + sep + TB_nameGen2.Text + sep + TB_nameGen3.Text + sep + TB_nameGen4.Text + sep + TB_nameGen5.Text;
             }
             else
             {
@@ -122,18 +131,26 @@ namespace ImageRenamerTool
 
             string selectFileType = CB_fileType.Items[CB_fileType.SelectedIndex].ToString();
 
-            string[] files = new string[0];
-            if (CB_recurseImageList.Checked)
-            {
+            SearchOption recurse = CB_recurseImageList.Checked == true ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
 
-            }
-            else
+            List<string> files = new List<string>();
+            List<string> searchExts = new List<string> { "jpg", "gif", "png", "bmp"};
+            foreach(string extension in searchExts)
             {
-                files = Directory.GetFiles(topLevelDirectory);
+                string searchPattern = "*." + extension;
+                files.AddRange(Directory.GetFiles(topLevelDirectory, searchPattern, recurse));
             }
 
-            MessageBox.Show("Files found: " + files.Length.ToString(), "Message");
-            for (int i = 0; i < files.Length; i++)
+            TB_alertsBox.BackColor = DefaultBackColor;
+            if (files.Count != Convert.ToInt32(TB_loadedFileCount.Text))
+            {
+                TB_loadedFileCount.Text = files.Count.ToString();
+                TB_alertsBox.Text = ("Files found: " + files.Count.ToString()).ToString();
+                TB_alertsBox.BackColor = Color.AliceBlue;
+            }
+
+            LST_loadedImages.Items.Clear();
+            for (int i = 0; i < files.Count; i++)
             {
                 if (i < LST_loadedImages.Items.Count)
                 {
@@ -196,5 +213,34 @@ namespace ImageRenamerTool
         {
 
         }
+
+        private void CB_recurseImageList_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DD_optionEditor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void B_renameImage_Click(object sender, EventArgs e)
+        {
+            string Imglocation = PB_loadedImage.ImageLocation;
+
+            FileInfo currentFile = new FileInfo(Imglocation);
+            currentFile.MoveTo(currentFile.Directory.FullName + "\\" + TB_nameGenFull.Text + currentFile.Extension);
+
+            int newIndex = ((LST_loadedImages.SelectedIndex + 1) % LST_loadedImages.Items.Count);
+            ImportImagesList();
+            LST_loadedImages.SelectedIndex = newIndex;
+
+        }
+
+        private void TB_nameGenFull_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

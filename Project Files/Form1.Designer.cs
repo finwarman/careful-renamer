@@ -35,6 +35,7 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox_Options = new System.Windows.Forms.GroupBox();
+            this.B_renameImage = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.DD_optionEditor = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -56,20 +57,22 @@
             this.TB_nameGen2 = new System.Windows.Forms.TextBox();
             this.TB_nameGen1 = new System.Windows.Forms.TextBox();
             this.groupBox_Image = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TB_loadedFileCount = new System.Windows.Forms.TextBox();
+            this.CB_fileType = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.LL_selectedImage = new System.Windows.Forms.LinkLabel();
             this.B_importImagesList = new System.Windows.Forms.Button();
             this.B_chooseImgFolder = new System.Windows.Forms.Button();
             this.LST_loadedImages = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.TB_imageRecurseDepth = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.CB_recurseImageList = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.CB_fileType = new System.Windows.Forms.ComboBox();
+            this.TB_alertsBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PB_loadedImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.SuspendLayout();
@@ -81,7 +84,7 @@
             // 
             // B_openImage
             // 
-            this.B_openImage.Location = new System.Drawing.Point(74, 345);
+            this.B_openImage.Location = new System.Drawing.Point(6, 310);
             this.B_openImage.Name = "B_openImage";
             this.B_openImage.Size = new System.Drawing.Size(78, 23);
             this.B_openImage.TabIndex = 0;
@@ -95,16 +98,16 @@
             this.PB_loadedImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PB_loadedImage.Location = new System.Drawing.Point(6, 34);
             this.PB_loadedImage.Name = "PB_loadedImage";
-            this.PB_loadedImage.Size = new System.Drawing.Size(376, 329);
+            this.PB_loadedImage.Size = new System.Drawing.Size(376, 334);
             this.PB_loadedImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PB_loadedImage.TabIndex = 1;
             this.PB_loadedImage.TabStop = false;
             // 
             // MTB_loadFolder
             // 
-            this.MTB_loadFolder.Location = new System.Drawing.Point(9, 377);
+            this.MTB_loadFolder.Location = new System.Drawing.Point(6, 401);
             this.MTB_loadFolder.Name = "MTB_loadFolder";
-            this.MTB_loadFolder.Size = new System.Drawing.Size(373, 20);
+            this.MTB_loadFolder.Size = new System.Drawing.Size(566, 20);
             this.MTB_loadFolder.TabIndex = 2;
             this.MTB_loadFolder.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MTB_loadFolder_MaskInputRejected);
             this.MTB_loadFolder.TextChanged += new System.EventHandler(this.MTB_loadFolder_TextChanged);
@@ -112,11 +115,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 404);
+            this.label1.Location = new System.Drawing.Point(6, 385);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.Size = new System.Drawing.Size(213, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Image Folder";
+            this.label1.Text = "Image Folder (Containing images to rename)";
             // 
             // splitter1
             // 
@@ -135,6 +138,7 @@
             // 
             // groupBox_Options
             // 
+            this.groupBox_Options.Controls.Add(this.B_renameImage);
             this.groupBox_Options.Controls.Add(this.label13);
             this.groupBox_Options.Controls.Add(this.DD_optionEditor);
             this.groupBox_Options.Controls.Add(this.groupBox2);
@@ -153,11 +157,21 @@
             this.groupBox_Options.Controls.Add(this.TB_nameGen1);
             this.groupBox_Options.Location = new System.Drawing.Point(599, 12);
             this.groupBox_Options.Name = "groupBox_Options";
-            this.groupBox_Options.Size = new System.Drawing.Size(230, 430);
+            this.groupBox_Options.Size = new System.Drawing.Size(230, 459);
             this.groupBox_Options.TabIndex = 4;
             this.groupBox_Options.TabStop = false;
             this.groupBox_Options.Text = "Naming Options";
             this.groupBox_Options.Enter += new System.EventHandler(this.groupBox_Options_Enter);
+            // 
+            // B_renameImage
+            // 
+            this.B_renameImage.Location = new System.Drawing.Point(29, 398);
+            this.B_renameImage.Name = "B_renameImage";
+            this.B_renameImage.Size = new System.Drawing.Size(164, 23);
+            this.B_renameImage.TabIndex = 14;
+            this.B_renameImage.Text = "Rename Image";
+            this.B_renameImage.UseVisualStyleBackColor = true;
+            this.B_renameImage.Click += new System.EventHandler(this.B_renameImage_Click);
             // 
             // label13
             // 
@@ -182,6 +196,7 @@
             this.DD_optionEditor.Size = new System.Drawing.Size(49, 21);
             this.DD_optionEditor.TabIndex = 12;
             this.DD_optionEditor.Text = "Edit";
+            this.DD_optionEditor.SelectedIndexChanged += new System.EventHandler(this.DD_optionEditor_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -277,7 +292,7 @@
             this.TB_separators.Name = "TB_separators";
             this.TB_separators.Size = new System.Drawing.Size(81, 20);
             this.TB_separators.TabIndex = 8;
-            this.TB_separators.Text = "_";
+            this.TB_separators.Text = "-";
             this.TB_separators.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TB_separators.TextChanged += new System.EventHandler(this.TB_separators_TextChanged);
             // 
@@ -319,6 +334,7 @@
             this.TB_nameGen4.Size = new System.Drawing.Size(100, 20);
             this.TB_nameGen4.TabIndex = 4;
             this.TB_nameGen4.Text = "Option4";
+            this.TB_nameGen4.TextChanged += new System.EventHandler(this.TB_nameGen4_TextChanged);
             // 
             // TB_nameGen3
             // 
@@ -335,6 +351,7 @@
             this.TB_nameGenFull.Name = "TB_nameGenFull";
             this.TB_nameGenFull.Size = new System.Drawing.Size(217, 20);
             this.TB_nameGenFull.TabIndex = 2;
+            this.TB_nameGenFull.TextChanged += new System.EventHandler(this.TB_nameGenFull_TextChanged);
             // 
             // TB_nameGen2
             // 
@@ -356,6 +373,8 @@
             // 
             // groupBox_Image
             // 
+            this.groupBox_Image.Controls.Add(this.label9);
+            this.groupBox_Image.Controls.Add(this.TB_loadedFileCount);
             this.groupBox_Image.Controls.Add(this.CB_fileType);
             this.groupBox_Image.Controls.Add(this.label15);
             this.groupBox_Image.Controls.Add(this.label14);
@@ -364,19 +383,61 @@
             this.groupBox_Image.Controls.Add(this.B_chooseImgFolder);
             this.groupBox_Image.Controls.Add(this.LST_loadedImages);
             this.groupBox_Image.Controls.Add(this.label12);
-            this.groupBox_Image.Controls.Add(this.label9);
             this.groupBox_Image.Controls.Add(this.TB_imageRecurseDepth);
-            this.groupBox_Image.Controls.Add(this.label8);
             this.groupBox_Image.Controls.Add(this.CB_recurseImageList);
             this.groupBox_Image.Controls.Add(this.PB_loadedImage);
             this.groupBox_Image.Controls.Add(this.label1);
             this.groupBox_Image.Controls.Add(this.MTB_loadFolder);
             this.groupBox_Image.Location = new System.Drawing.Point(15, 12);
             this.groupBox_Image.Name = "groupBox_Image";
-            this.groupBox_Image.Size = new System.Drawing.Size(578, 430);
+            this.groupBox_Image.Size = new System.Drawing.Size(578, 457);
             this.groupBox_Image.TabIndex = 5;
             this.groupBox_Image.TabStop = false;
             this.groupBox_Image.Text = "Image + Saving / Loading";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(379, 430);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(193, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "- Recursion Depth (\'0\' for all Subfolders)";
+            // 
+            // TB_loadedFileCount
+            // 
+            this.TB_loadedFileCount.Enabled = false;
+            this.TB_loadedFileCount.Location = new System.Drawing.Point(520, 13);
+            this.TB_loadedFileCount.Name = "TB_loadedFileCount";
+            this.TB_loadedFileCount.Size = new System.Drawing.Size(52, 20);
+            this.TB_loadedFileCount.TabIndex = 18;
+            this.TB_loadedFileCount.Text = "0";
+            // 
+            // CB_fileType
+            // 
+            this.CB_fileType.FormattingEnabled = true;
+            this.CB_fileType.Items.AddRange(new object[] {
+            "All (.*.)",
+            "Images",
+            "JPG",
+            "BMP",
+            "GIF",
+            "EXE"});
+            this.CB_fileType.Location = new System.Drawing.Point(439, 377);
+            this.CB_fileType.Name = "CB_fileType";
+            this.CB_fileType.Size = new System.Drawing.Size(65, 21);
+            this.CB_fileType.TabIndex = 14;
+            this.CB_fileType.Text = "All (.*.)";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(388, 380);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 13);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "File Type:";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label14
             // 
@@ -416,7 +477,7 @@
             // 
             // B_chooseImgFolder
             // 
-            this.B_chooseImgFolder.Location = new System.Drawing.Point(80, 404);
+            this.B_chooseImgFolder.Location = new System.Drawing.Point(6, 427);
             this.B_chooseImgFolder.Name = "B_chooseImgFolder";
             this.B_chooseImgFolder.Size = new System.Drawing.Size(92, 20);
             this.B_chooseImgFolder.TabIndex = 10;
@@ -443,46 +504,29 @@
             this.label12.TabIndex = 8;
             this.label12.Text = "Loaded images:";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(278, 413);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 13);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "(0 to include all subfolders)";
-            // 
             // TB_imageRecurseDepth
             // 
-            this.TB_imageRecurseDepth.Location = new System.Drawing.Point(462, 404);
+            this.TB_imageRecurseDepth.Location = new System.Drawing.Point(344, 426);
             this.TB_imageRecurseDepth.Name = "TB_imageRecurseDepth";
             this.TB_imageRecurseDepth.Size = new System.Drawing.Size(32, 20);
             this.TB_imageRecurseDepth.TabIndex = 6;
             this.TB_imageRecurseDepth.Text = "0";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(226, 400);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(230, 13);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Check \'Recurse\' to include subfolders of depth:";
-            // 
             // CB_recurseImageList
             // 
             this.CB_recurseImageList.AutoSize = true;
-            this.CB_recurseImageList.Location = new System.Drawing.Point(500, 403);
+            this.CB_recurseImageList.Location = new System.Drawing.Point(181, 429);
             this.CB_recurseImageList.Name = "CB_recurseImageList";
-            this.CB_recurseImageList.Size = new System.Drawing.Size(72, 17);
+            this.CB_recurseImageList.Size = new System.Drawing.Size(131, 17);
             this.CB_recurseImageList.TabIndex = 4;
-            this.CB_recurseImageList.Text = "Recurse?";
+            this.CB_recurseImageList.Text = "- Recurse Subfolders?";
             this.CB_recurseImageList.UseVisualStyleBackColor = true;
+            this.CB_recurseImageList.CheckedChanged += new System.EventHandler(this.CB_recurseImageList_CheckedChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(723, 445);
+            this.label10.Location = new System.Drawing.Point(723, 474);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(106, 13);
             this.label10.TabIndex = 11;
@@ -491,43 +535,38 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 445);
+            this.label11.Location = new System.Drawing.Point(15, 474);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 13);
             this.label11.TabIndex = 12;
             this.label11.Text = "Version 0.0.1";
             // 
-            // label15
+            // TB_alertsBox
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(388, 380);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 13);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "File Type:";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+            this.TB_alertsBox.Enabled = false;
+            this.TB_alertsBox.Location = new System.Drawing.Point(286, 475);
+            this.TB_alertsBox.Name = "TB_alertsBox";
+            this.TB_alertsBox.Size = new System.Drawing.Size(288, 20);
+            this.TB_alertsBox.TabIndex = 13;
+            this.TB_alertsBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // CB_fileType
+            // label16
             // 
-            this.CB_fileType.FormattingEnabled = true;
-            this.CB_fileType.Items.AddRange(new object[] {
-            "All (.*.)",
-            "Images",
-            "JPG",
-            "BMP",
-            "GIF",
-            "EXE"});
-            this.CB_fileType.Location = new System.Drawing.Point(439, 377);
-            this.CB_fileType.Name = "CB_fileType";
-            this.CB_fileType.Size = new System.Drawing.Size(65, 21);
-            this.CB_fileType.TabIndex = 14;
-            this.CB_fileType.Text = "All (.*.)";
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label16.Location = new System.Drawing.Point(244, 478);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(36, 13);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "Alerts:";
             // 
             // OptionsWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 467);
+            this.ClientSize = new System.Drawing.Size(836, 496);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.TB_alertsBox);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox_Image);
@@ -576,9 +615,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox CB_recurseImageList;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TB_imageRecurseDepth;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -594,6 +631,11 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox CB_fileType;
+        private System.Windows.Forms.TextBox TB_alertsBox;
+        private System.Windows.Forms.TextBox TB_loadedFileCount;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button B_renameImage;
     }
 }
 
