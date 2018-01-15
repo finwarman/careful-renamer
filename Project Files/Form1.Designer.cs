@@ -530,7 +530,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(106, 13);
             this.label10.TabIndex = 11;
-            this.label10.Text = "© Fin Warman, 2017";
+            this.label10.Text = "© Fin Warman, 2018";
             // 
             // label11
             // 

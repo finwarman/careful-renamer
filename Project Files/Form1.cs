@@ -134,7 +134,7 @@ namespace ImageRenamerTool
             SearchOption recurse = CB_recurseImageList.Checked == true ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
 
             List<string> files = new List<string>();
-            List<string> searchExts = new List<string> { "jpg", "gif", "png", "bmp"};
+            List<string> searchExts = new List<string> { "jpg", "gif", "png", "bmp", "jpeg", "tif", "tiff"};
             foreach(string extension in searchExts)
             {
                 string searchPattern = "*." + extension;
