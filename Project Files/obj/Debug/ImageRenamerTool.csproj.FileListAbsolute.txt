@@ -16,3 +16,12 @@ C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renamin
 C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.csproj.GenerateResource.Cache
 C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.exe
 C:\Users\Fin\Documents\Visual Studio 2017\Projects\ImageRenamerTool\File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.pdb
+C:\Users\Fin\Source\Repos\Semi-Auto-File-Renaming-Assistant\Project Files\bin\Debug\ImageRenamerTool.exe.config
+C:\Users\Fin\Source\Repos\Semi-Auto-File-Renaming-Assistant\Project Files\bin\Debug\ImageRenamerTool.exe
+C:\Users\Fin\Source\Repos\Semi-Auto-File-Renaming-Assistant\Project Files\bin\Debug\ImageRenamerTool.pdb
+C:\Users\Fin\Source\Repos\Semi-Auto-File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.OptionsWindow.resources
+C:\Users\Fin\Source\Repos\Semi-Auto-File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.Properties.Resources.resources
+C:\Users\Fin\Source\Repos\Semi-Auto-File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.csproj.GenerateResource.Cache
+C:\Users\Fin\Source\Repos\Semi-Auto-File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.csproj.CoreCompileInputs.cache
+C:\Users\Fin\Source\Repos\Semi-Auto-File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.exe
+C:\Users\Fin\Source\Repos\Semi-Auto-File-Renaming-Assistant\Project Files\obj\Debug\ImageRenamerTool.pdb

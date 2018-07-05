@@ -247,5 +247,9 @@ namespace ImageRenamerTool
 
         }
 
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
