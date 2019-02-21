@@ -5,3 +5,11 @@ This tool allows configuration of naming templates, where inidividual sections o
 
 ![alt text](https://raw.githubusercontent.com/FinWarman/Semi-Auto-File-Renaming-Assistant/master/screenshot.jpg)
 
+
+
+
+
+
+
+(Finley Warman 2019)
+
